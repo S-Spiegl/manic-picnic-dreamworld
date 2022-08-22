@@ -1,0 +1,9 @@
+{
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}
+
+//had to run npm install --save-dev @babel/plugin-transform-modules-commonjs
