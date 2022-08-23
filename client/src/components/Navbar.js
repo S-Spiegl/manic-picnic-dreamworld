@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
       <nav>
         <div className="nav-container">
-          <div>Welcome, {userData.userName}</div>
+          <div data-cy="navbar-welcome">Hi, {userData.userName}</div>
         </div>
       </nav>
     )

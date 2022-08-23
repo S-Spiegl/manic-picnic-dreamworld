@@ -5,6 +5,7 @@ import cors from 'cors';
 
 //import routes
 import usersRoutes from './routes/users.js'
+import sessionsRoutes from './routes/sessions.js'
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/user', usersRoutes)
+app.use('/sessions', sessionsRoutes)
 
 const CONNECTION_URL = "mongodb+srv://ManicPicnicDreamworld:L7jL0eAo7fzpMnPt@cluster0.kqjwqzq.mongodb.net/development?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 4000;

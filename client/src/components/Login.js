@@ -29,6 +29,7 @@ const Login = (props, {Login, error}) => {
         <input 
           type="email"
           name="email"
+          data-cy="login-email"
           className="drop-down-list-item"
           placeholder="Enter your email"
           required
@@ -37,12 +38,13 @@ const Login = (props, {Login, error}) => {
         <input 
           type="password"
           name="password"
+          data-cy="login-password"
           className="drop-down-list-item"
           placeholder="Choose password"
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
-        <button className="drop-down-list-item">Login</button>
+        <button className="drop-down-list-item" data-cy="login-button">Login</button>
       </form>
     </div>
   );
