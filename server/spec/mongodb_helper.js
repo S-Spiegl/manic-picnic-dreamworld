@@ -1,6 +1,4 @@
 var mongoose = require("mongoose");
-// import {setCollectionName} from "../models/user.js"
-// import dotenv from "dotenv";
 
 beforeAll(function (done) {
   mongoose.connect("mongodb+srv://ManicPicnicDreamworld:L7jL0eAo7fzpMnPt@cluster0.kqjwqzq.mongodb.net/?retryWrites=true&w=majority", {

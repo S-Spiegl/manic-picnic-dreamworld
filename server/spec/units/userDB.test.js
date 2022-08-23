@@ -37,10 +37,10 @@ describe('User model', () => {
     user.save((err) => {
       expect(err).toBeNull();
 
-      User.find((error, testusers) => {
+      User.find((error, testUsers) => {
         expect(error).toBeNull();
   
-        expect(testusers[0].userName).toBe("Bob");
+        expect(testUsers[0].userName).toBe("Bob");
       })
 
       done();
