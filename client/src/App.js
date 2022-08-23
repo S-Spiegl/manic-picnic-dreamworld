@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"; 
 
 import { useDispatch } from "react-redux";
+import SignUp from "./components/SignUp.js";
+import Login from "./components/Login.js";
+import Navbar from "./components/Navbar.js";
 
 const App = () => {
 
@@ -9,7 +12,9 @@ const App = () => {
 
   return (
     <div>
-      Test
+      <Navbar />
+      <SignUp />
+      <Login />
     </div>
   );
 }
