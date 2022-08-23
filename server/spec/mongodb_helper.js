@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 beforeAll(function (done) {
-  mongoose.connect("mongodb+srv://ManicPicnicDreamWorldTest:v3ZAJgfGYraHIQPz@cluster0.lbkye90.mongodb.net/?retryWrites=true&w=majority", {
+  mongoose.connect("mongodb+srv://ManicPicnicDreamworld:L7jL0eAo7fzpMnPt@cluster0.kqjwqzq.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
