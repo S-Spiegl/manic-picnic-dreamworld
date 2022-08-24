@@ -12,7 +12,7 @@ describe('User model', () => {
     });
     user = new User({
       userName: 'Bob',
-      email: 'bob@test.com',
+      email: 'bobs@test.com',
       password: 'guest',
       kitchen: []
     });
@@ -22,7 +22,7 @@ describe('User model', () => {
     expect(user.userName).toBe('Bob')
   })
   it('has an email', () => {
-    expect(user.email).toBe('bob@test.com')
+    expect(user.email).toBe('bobs@test.com')
   })
   it('has a kitchen', () => {
     expect(user.kitchen).toEqual([])
