@@ -8,6 +8,8 @@ import './style.css'
 import Layout from "./pages/layout.jsx";
 import Home from "./pages/home.jsx";
 import Contact from "./pages/contact.jsx";
+import SignUp from "./pages/signup.jsx";
+import Login from "./pages/login.jsx";
 
 
 export default function App() {
@@ -16,8 +18,10 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

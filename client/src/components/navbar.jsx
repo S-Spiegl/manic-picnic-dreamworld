@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { loginUser } from '../actions/loginUserAction.js'
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
-import SignUp from "./SignUp.js";
+import SignUp from "./signUp.jsx";
 import Login from "./Login.js";
 import { Provider } from 'react-redux'
 import store from "../store/store.js";
@@ -13,34 +13,25 @@ function Navbar() {
   const userData  = useSelector((state) => state.user)
 
 
-    if(1 == 2){
+    if(1 == 1){
       return (
         <nav>
           <div className="nav-container-first-row">
             <div className="logo-container">
               <div className="logo">Logo</div>  
             </div>
-            
-           
-          {/* <div>
-           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/blogs">Blogs</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-          </div>  */}
           </div>
-          <div className="nav-container">
-          <div data-cy="navbar-welcome">Hi, {userData.userName}</div>
-        </div>
           <div className="nav-container-second-row">
-            List of site links go here - home, recipes, myKitchen etc
+          <div data-cy="navbar-welcome-container" className="navbar-welcome-container">
+            <div className="navbar-welcome">
+              Hi, {userData.userName}
+            </div>
+          </div>
+          <div className="navbar-links-container">
+            <div className="navbar-links">
+              List of site links go here - home, recipes, myKitchen etc
+            </div>
+          </div>
           </div>
         </nav>
       );
@@ -54,11 +45,12 @@ function Navbar() {
               <div className="logo">Logo</div>  
             </div>
             <div className="signup-and-login-container">
-              <div>Login placeholder</div>
-              <div>Signup placeholder</div>
+              <div><Link to="/login">Login</Link></div>
+              <div><Link to="/signup">Sign up</Link></div>
             </div>
             {/* <SignUp />
             <Login /> */}
+            
           </div>
           <div className="nav-container-second-row">
             List of site links go here - home, recipes, myKitchen etc
@@ -70,3 +62,18 @@ function Navbar() {
 
 export default Navbar;
 
+
+// eslint-disable-next-line no-lone-blocks
+{/* <div>
+           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/blogs">Blogs</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+          </div>  */}
