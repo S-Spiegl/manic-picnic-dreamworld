@@ -24,7 +24,7 @@ const Login = (props, {Login, error}) => {
   };
 
   return (
-    <div>
+    <div className="sign-up-container">
       <form onSubmit={handleSubmit}>
         <input 
           type="email"

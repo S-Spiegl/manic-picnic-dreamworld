@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Reenie+Beanie&family=Rock+Salt&family=Rubik+Mono+One&family=Sansita&family=Shrikhand&display=swap');
+
+
+/* general */ 
+
+body {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  font-family: 'Inter', sans-serif;
+  background-color: ghostwhite;
+  background-size: cover;
+  color: rgb(85, 84, 84);
+  /* background-attachment: fixed; */
+}
+
+.master-container {
+  /* height: 100vh; */
+  min-height: 100vh;
+  width: 100vw;
+  
+}
+
+.central-container-one-master {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 350px;
+  /* min-height: 100vh; */
+  width: 100vw;
+  /* margin-top: 3%; */
+  margin-bottom: 3%;
+}
+
+.central-containers-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  /* margin-top: 3%; */
+  margin-bottom: 1%;
+}
+.navbar-main-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: flex-start;
+  background-color: pink;
+  height: 80px;
+}
+
+/* navbar */
+
+.sign-up-container {
+  display: flex;
+}
+
+.login-container {
+  display: flex;
+}
+
+.nav-container-first-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: white;
+  width: 100%;
+}
+
+.nav-container-second-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  background-color: pink;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: grey;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.logo-container {
+  width: 60%;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 20%;
+}
+
+.logo {
+  background-color: white;
+  height: 50px;
+}
+
+.signup-and-login-container {
+  width: 40%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.central-container-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100%;
+  max-height: 100%;
+  /* border: 1px solid grey; */
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-image: url('../public/nathan-dumlao-bB3BvsoXQLA-unsplash.jpg');
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+.central-container-two {
+  display: flex;
+  flex-direction: row;
+  min-height: 30%;
+  max-width: 80%;
+  min-width: 80%;
+  border: 1px solid grey;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.central-container-three {
+  display: flex;
+  flex-direction: row;
+  min-height: 20%;
+  min-width: 80%;
+  max-width: 80%;
+  border: 1px solid grey;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.central-container-text-box {
+  border: 1px solid grey;
+  width: 500px;
+  height: 200px;
+  /* margin-top: 5%; */
+  margin-left: 5%;
+  background-color: white;
+}
+
+.padding-div {
+  background-color: ghostwhite;
+  height: 5%;
+}
+

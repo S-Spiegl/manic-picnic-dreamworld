@@ -11,11 +11,26 @@ const App = () => {
 
 
   return (
-    <div>
-      <Navbar />
-      <SignUp />
-      <Login />
+    <div className="master-container">
+      <div className="navbar-main-container">
+        <Navbar />
+      </div>
+      <div className="central-container-one-master">
+        <div className="central-container-one">
+          <div className="central-container-text-box">
+          </div>
+        </div>
+      </div>
+      <div className="central-containers-master">
+        <div className="central-container-two">
+          Three selected meals
+        </div>
+        <div className="central-container-three">
+          Not sure what to put in this section yet 
+        </div>
+      </div>
     </div>
+    
   );
 }
 
