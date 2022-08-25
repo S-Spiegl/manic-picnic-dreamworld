@@ -31,8 +31,8 @@ export default function Navbar() {
             <div>Login placeholder</div>
             <div>Signup placeholder</div>
           </div>
-          {/* <SignUp />
-          <Login /> */}
+          <SignUp />
+          <Login />
         </div>
         <div className="nav-container-second-row">
           List of site links go here - home, recipes, myKitchen etc
