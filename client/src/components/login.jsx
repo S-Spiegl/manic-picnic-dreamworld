@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from '../actions/loginUserAction.js'
 import { useDispatch } from 'react-redux';
+import { useSelector } from "react-redux";
 
 
 
@@ -16,13 +17,30 @@ function LoginComponent (props, {Login, error}) {
     kitchen: []
   })
 
+  const newUserData  = useSelector((state) => state.user)
+
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(loginUser(userData));
-    console.log(userData.email);
-    navigate("/");
+    console.log(newUserData);
+    if(newUserData.email){
+      navigate("/")};
+      //the above checks the store and assigns the userData to newUserData, then
+      //checks if said newUserData exists. if it does, it redirects... however, you have to
+      //click twice.. once to login, and once to redirect ... how to fix this?
+
+    //can navigate await a successful login?
+    //can navigate be called from the action, and therefore
+    //only work when login is successful?
+    //problem is that the logic for whether a login is successful or not is held in
+    //the controller, so I can't work out how to make the redirect/navigate conditional
+    //upon correct credentials. All the redirect tutorials assume the logic for logging
+    //in is done at the frontend, but all mine is in the backend. 
+    //other big issue is how to make state persist, so that after the login is successful,
+    //the state of the homepage will change to show a user's details...
+    
     // props.setLoggedInStatus(true)
   };
 

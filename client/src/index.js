@@ -11,10 +11,14 @@ import Contact from "./pages/contact.jsx";
 import SignUp from "./pages/signup.jsx";
 import Login from "./pages/login.jsx";
 import Kitchen from "./pages/kitchen.jsx";
+import { persistStore } from 'redux-persist';
+// import { PersistGate } from 'redux-persist/integration/react';
 
+let persistor = persistStore(store);
 
 export default function App() {
   return (
+    
     <Provider store={store}>
     <BrowserRouter>
       <Routes>

@@ -13,7 +13,8 @@ function Navbar() {
   const userData  = useSelector((state) => state.user)
 
 
-    if(1 == 2){
+    if(userData.email){
+      //i.e. if there is something in the store... 
       return (
         <nav>
           <div className="nav-container-first-row">
