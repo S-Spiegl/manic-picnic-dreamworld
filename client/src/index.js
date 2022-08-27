@@ -10,6 +10,7 @@ import Home from "./pages/home.jsx";
 import Contact from "./pages/contact.jsx";
 import SignUp from "./pages/signup.jsx";
 import Login from "./pages/login.jsx";
+import Kitchen from "./pages/kitchen.jsx";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="login" element={<Login />} />
+          <Route path="kitchen" element={<Kitchen />} />
         </Route>
       </Routes>
     </BrowserRouter>

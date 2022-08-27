@@ -13,7 +13,7 @@ function Navbar() {
   const userData  = useSelector((state) => state.user)
 
 
-    if(1 == 1){
+    if(1 == 2){
       return (
         <nav>
           <div className="nav-container-first-row">
@@ -54,6 +54,8 @@ function Navbar() {
           </div>
           <div className="nav-container-second-row">
             List of site links go here - home, recipes, myKitchen etc
+            <div><Link to="/">Home</Link></div>
+            <div><Link to="/kitchen">Kitchen</Link></div>
           </div>
         </nav>
       )

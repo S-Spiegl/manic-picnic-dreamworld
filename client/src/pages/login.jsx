@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LoginComponent from '../components/login.jsx';
+import { Navigate } from "react-router-dom";
 
 function Login() {
     return (
-        <h1>This is the login page</h1>
+        <div>
+            <h1>Login</h1>
+            <div>
+                <LoginComponent />
+            </div>
+        </div>
+
     );
 }
 
