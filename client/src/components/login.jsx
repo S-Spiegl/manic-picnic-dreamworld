@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { loginUser } from '../actions/loginUserAction.js'
 import { useDispatch } from 'react-redux';
 
 
 
 function LoginComponent (props, {Login, error}) {
+
+  let navigate = useNavigate();
    
   const [userData, setUserData] = useState({
     userName: '',
@@ -20,6 +22,7 @@ function LoginComponent (props, {Login, error}) {
     e.preventDefault();
     dispatch(loginUser(userData));
     console.log(userData.email);
+    navigate("/");
     // props.setLoggedInStatus(true)
   };
 
