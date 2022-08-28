@@ -3,6 +3,7 @@ import * as api from '../api/index.js';
 
 export const loginUser = (userData) => async (dispatch) => {
   try {
+    console.log('trying to log in')
     const { data } = await api.loginUser({userData: userData});
     dispatch({ type: 'VERIFY_USER', payload: data });
     // browserHistory.push('/');

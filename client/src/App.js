@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import SignUp from "./components/SignUp.js";
 import Login from "./components/Login.js";
 import Navbar from "./components/Navbar.js";
+import Kitchen from "./components/kitchen.jsx";
 
 const App = () => {
 

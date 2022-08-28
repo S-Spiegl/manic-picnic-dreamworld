@@ -1,8 +1,11 @@
 import React from 'react';
+import KitchenComponent from '../components/kitchen.jsx'
 
 function Kitchen() {
     return (
-        <h1>This is the kitchen</h1>
+        <div>
+        <KitchenComponent />
+        </div>
     );
 }
 
