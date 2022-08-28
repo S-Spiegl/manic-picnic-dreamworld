@@ -1,3 +1,3 @@
-export const logoutUser = (userData) => async (dispatch) => {
-    dispatch({ type: 'END_SESSION', payload: userData });
+export const logoutUser = (potato) => async (dispatch) => {
+    dispatch({ type: 'END_SESSION', payload: potato });
 }

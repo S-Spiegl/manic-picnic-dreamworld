@@ -4,10 +4,8 @@ import { loginUser } from '../actions/loginUserAction.js'
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
 import SignUp from "./signUp.jsx";
-import Login from "./Login.js";
 import { Provider } from 'react-redux'
 import store from "../store/store.js";
-import logoutComponent from "./logout.jsx";
 import LogoutComponent from "./logout.jsx";
 
 function Navbar() {

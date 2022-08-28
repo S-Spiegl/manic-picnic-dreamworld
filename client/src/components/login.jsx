@@ -4,9 +4,6 @@ import { loginUser } from '../actions/loginUserAction.js'
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
 
-
-
-
 function LoginComponent (props, {Login, error}) {
 
   let navigate = useNavigate();

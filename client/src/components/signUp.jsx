@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { addUser } from '../actions/addUser.js'
 import { useDispatch } from 'react-redux';
+import { useSelector } from "react-redux";
 
-const SignUp = ({Signup, error}) => {
+function SignUpComponent (props, {Signup, error}) {
+
+  let navigate = useNavigate();
    
   const [userData, setUserData] = useState({
     userName: '',
@@ -11,11 +15,18 @@ const SignUp = ({Signup, error}) => {
     fridge: []
   })
 
+  const newUserData  = useSelector((state) => state.user)
+
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(addUser(userData));
+    console.log(newUserData)
+    //why does signup not return the user's email to store, only their name and id???
+    //this is why I had to check for a username, not an email upon signup in the below conditional 
+    if(newUserData.userName){
+      navigate("/")};
   };
 
   return (
@@ -54,4 +65,4 @@ const SignUp = ({Signup, error}) => {
   );
 }
 
-export default SignUp;
+export default SignUpComponent;
