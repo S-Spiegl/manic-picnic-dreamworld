@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 
 
+
 function LoginComponent (props, {Login, error}) {
 
   let navigate = useNavigate();
@@ -29,7 +30,7 @@ function LoginComponent (props, {Login, error}) {
       navigate("/")};
       //the above checks the store and assigns the userData to newUserData, then
       //checks if said newUserData exists. if it does, it redirects... however, you have to
-      //click twice.. once to login, and once to redirect ... how to fix this?
+      //click twice.. once to login, and once to redirect ... how to fix
 
     //can navigate await a successful login?
     //can navigate be called from the action, and therefore

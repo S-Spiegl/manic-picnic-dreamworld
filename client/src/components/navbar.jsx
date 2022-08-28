@@ -7,6 +7,8 @@ import SignUp from "./signUp.jsx";
 import Login from "./Login.js";
 import { Provider } from 'react-redux'
 import store from "../store/store.js";
+import logoutComponent from "./logout.jsx";
+import LogoutComponent from "./logout.jsx";
 
 function Navbar() {
 
@@ -21,6 +23,9 @@ function Navbar() {
             <div className="logo-container">
               <div className="logo">Logo</div>  
             </div>
+            <div className="signup-and-login-container">
+            <div><LogoutComponent /></div>
+            </div>
           </div>
           <div className="nav-container-second-row">
           <div data-cy="navbar-welcome-container" className="navbar-welcome-container">
@@ -28,14 +33,16 @@ function Navbar() {
               Hi, {userData.userName}
             </div>
           </div>
-          <div className="navbar-links-container">
-            <div className="navbar-links">
-              List of site links go here - home, recipes, myKitchen etc
-            </div>
+          <div className="nav-container-second-row">
+            List of site links go here - home, recipes, myKitchen etc
+            <div><Link to="/">Home</Link></div>
+            <div><Link to="/kitchen">Kitchen</Link></div>
           </div>
           </div>
         </nav>
       );
+
+      
       
     }
     else{
