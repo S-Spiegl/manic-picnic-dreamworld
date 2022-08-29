@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import KitchenItem from './KitchenItem.js'
+import KitchenItem from './kitchenItem.jsx'
 import { addKitchenItem } from "../actions/addKitchenItem.js";
 // import { removeKitchenItem } from "../actions/removeKitchenItem.js"
 // import Input from './Input.js'
@@ -8,7 +8,46 @@ import { addKitchenItem } from "../actions/addKitchenItem.js";
 
 export default function KitchenComponent(props) {
   const userState = useSelector((state) => state.user)
+  
+  
+  //to get list of items in kitchen, uncomment the below block and 'fridgeContents'
+  //at bottom of code. Ignore getFridgeContents. The below will only work if 
+  //an action has been called after going to kitchen (e.g. if you've added an ingredient)
+
+  // const fridgeContents = userState.kitchen.map((item) => {
+  //   return(
+  //     <KitchenItem name={item}/>
+  //   )
+  // })
+
+  // const getFridgeContents = () => {
+  //   if(userState.kitchen){
+  //     userState.kitchen.map((item) => {
+  //       console.log('test', userState.kitchen)
+  //       return(
+  //         <KitchenItem name={item}/>
+  //       )
+  //     })
+  //   }
+  //   else{
+  //     return "loading"
+  //   }}
+  
+
+  //when you first log in, the userState.kitchen is for some reason undefined and thus unmappable...
+  //once you enter an item, all is fine. But this means I can't display the kitchen from
+  //the get go...
+
+  //to see this in action, log in and look at the console.log of userState.kitchen
+  //it's undefined... (yet the log shows the contents of the kitchen array when you log userState)
+  //then add an item and see how it becomes defined... why does it have to wait for an
+  //item to be added??? Something to do with async messing things up? Can you put a timer 
+  //on it??
+
+  // console.log(fridgeContents)
+
   console.log(userState)
+  console.log('userState.kitchen', userState.kitchen)
 
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
@@ -16,15 +55,8 @@ export default function KitchenComponent(props) {
   const dispatch = useDispatch()
 
   const handleSubmit = async (event) => {
-    console.log("line 21")
-    console.log('userstate in component', userState)
-    //here the userstate is still correct, but by the time it hits the action, it's 
-    //being set to whatever I enter as an ingredient - solved - the issue was that there
-    //was a console log in the async function below and for some reason it was 
-    //messing up the order
     event.preventDefault()
       let asyncAddKitchenItem = addKitchenItem(
-        // console.log(fridgeItem.item),
         fridgeItem.item,
         userState
         )
@@ -39,12 +71,6 @@ export default function KitchenComponent(props) {
   //   ))
   // }
 
-  // const fridgeContents = userState.fridge.map((item) => {
-  //   return(
-  //     <KitchenItem name={item} handleClick={handleClick}/>
-  //   )
-  // })
-  
   return (
 
   
@@ -70,9 +96,9 @@ export default function KitchenComponent(props) {
 
             </form>
           </div>
-          {/* <div className="fridge-contents-subcontainer">
-            {fridgeContents}
-          </div> */}
+          <div className="fridge-contents-subcontainer">
+            {/* {getFridgeContents} */}
+          </div>
         </div>
         <div className="fridge-what-for-dinner-subcontainer">
           {/* <Input /> */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function KitchenItem(props) {
+function KitchenItem(props) {
   const handleClick = () => {
     // setRemoveItem(item)
     console.log()
@@ -12,3 +12,5 @@ export default function KitchenItem(props) {
     </div>
   )
 }
+
+export default KitchenItem
